@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
-public class IndexController {
+public class HelloWordController {
 
 	@RequestMapping(method = RequestMethod.GET)
-    public String user() {
+    public String sayHello() {
+      //  model.addAttribute("greeting", "Hello World from Spring 4 MVC");
         return "users";
     }
  

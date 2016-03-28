@@ -6,12 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link href="<c:url value='/static/css/bootstrap.css' />"
-	rel="stylesheet">
+<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet">
 <link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
 </head>
-<body>
-
+<body ng-app="myApp" class="ng-cloak">
+	<div ng-controller="UserController as ctrl">
 	<table class="table table-hover">
 		<thead>
 			<tr>
@@ -23,6 +22,7 @@
 			</tr>
 		</thead>
 		<tbody>
+			
 			<tr ng-repeat="u in ctrl.users">
 				<td><span ng-bind="u.id"></span></td>
 				<td><span ng-bind="u.name"></span></td>
@@ -34,6 +34,7 @@
 			</tr>
 		</tbody>
 	</table>
+	</div>
 	<script src="<c:url value='/static/js/angular/angular.min.js' />"></script>
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<script src="<c:url value='/static/js/service/user_service.js' />"></script>

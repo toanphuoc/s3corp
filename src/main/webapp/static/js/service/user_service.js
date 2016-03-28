@@ -14,4 +14,4 @@ App.factory('UserService', ['$http', '$q', function($http, $q){
 				);
 		}
 	}
-}])
+}]);

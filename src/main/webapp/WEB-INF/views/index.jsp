@@ -45,16 +45,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="#/items/home">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="#/items/about">About</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="#/items/blog">Blog</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="#/items/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -83,6 +83,10 @@
 	
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<!-- <script src="<c:url value='/static/js/service/user_service.js' />"></script> -->
-	<script src="<c:url value='/static/js/controller/user_controller.js' />"></script>
+	<script src="<c:url value='/static/js/controller/controllers.js' />"></script>
+	<script src="<c:url value='/static/js/controller/home_controller.js' />"></script>
+	<script src="<c:url value='/static/js/controller/about_controller.js' />"></script>
+	<script src="<c:url value='/static/js/controller/blog_controller.js' />"></script>
+	<script src="<c:url value='/static/js/controller/contact_controller.js' />"></script>
 </body>
 </html>

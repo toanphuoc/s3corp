@@ -11,6 +11,18 @@ app.config(['$routeProvider', function($routeProvider){
 		templateUrl : 'items/home',
 		controller: 'HomeController'
 	}).
+	when('/items/about', {
+		templateUrl : 'items/about',
+		controller: 'AboutController'
+	}).
+	when('/items/blog', {
+		templateUrl : 'items/blog',
+		controller: 'BlogController'
+	}).
+	when('/items/contact', {
+		templateUrl : 'items/contact',
+		controller: 'ContactController'
+	}).
 	otherwise({
 	    redirectTo: '/items/home'
 	});

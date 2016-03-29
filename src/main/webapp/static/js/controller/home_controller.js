@@ -1,5 +1,3 @@
-var appControllers = angular.module('appControllers', []);
-
 appControllers.controller('HomeController', ['$scope', function($scope){
 
 	//load all users

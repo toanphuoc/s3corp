@@ -11,4 +11,19 @@ public class MainTemplateController {
     public String getHomeTemplate() {
     	return "template/home";	
     }
+	
+	@RequestMapping(value="/about")
+    public String getAboutTemplate() {
+    	return "template/about";	
+    }
+	
+	@RequestMapping(value="/blog")
+    public String getBlogTemplate() {
+    	return "template/blog";	
+    }
+	
+	@RequestMapping(value="/contact")
+    public String getContactTemplate() {
+    	return "template/contact";	
+    }
 }

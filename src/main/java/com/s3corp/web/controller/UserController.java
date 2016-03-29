@@ -1,4 +1,4 @@
-package com.s3corp.web.controller.rest;
+package com.s3corp.web.controller;
 
 import java.util.List;
 import org.springframework.http.ResponseEntity;

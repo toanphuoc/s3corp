@@ -1,17 +1,14 @@
-'use strict';
+var appServices = angular.module('appServices', ['ngResource']);
 
-App.factory('UserService', ['$http', '$q', function($http, $q){
-	return {
-		fetchAllUsers: function(){
-			return $http.get('http://localhost:8080/web/user/getList')
-				.then(
-					function(response){
-						return response.data;
-					},function(errResponse){
-						console.error('Error while fetching users');
-                        return $q.reject(errResponse);
-					}
-				);
-		}
-	}
+
+appServices.factory('UserService', ['$http', function($http){
+
+	var factory = {};
+	factory.fetchAllUsers = function(){
+		return $http({
+			url: 'http://localhost:8080/web/user/getList'
+		});
+	};
+
+	return factory;
 }]);

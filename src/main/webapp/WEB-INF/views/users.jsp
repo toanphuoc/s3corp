@@ -22,7 +22,6 @@
 			</tr>
 		</thead>
 		<tbody>
-			
 			<tr ng-repeat="u in ctrl.users">
 				<td><span ng-bind="u.id"></span></td>
 				<td><span ng-bind="u.name"></span></td>

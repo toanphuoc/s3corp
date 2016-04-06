@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,15 +29,23 @@ public class UserControllerImpl implements UserController{
         }
         return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 	}
-
-	public ResponseEntity<User> getUser(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	@RequestMapping(value = "/getUser/{id}", method = RequestMethod.GET)
+	public ResponseEntity<User> getUser(@PathVariable("id") long id) {
+		User user = userService.findById(id);
+		if(user == null){
+			return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 
-	public ResponseEntity<List<User>> getUser(String name) {
-		// TODO Auto-generated method stub
-		return null;
+	@RequestMapping(value = "/getUserByName/{name}", method = RequestMethod.GET)
+	public ResponseEntity<List<User>> getUser(@PathVariable("name") String name) {
+		List<User> users = userService.findByName(name);
+		if(users.isEmpty()){
+			return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);
+		}
+		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 	}
 
 	public void createUser(String name, int age, double salary,

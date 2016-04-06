@@ -5,7 +5,8 @@
 <hibernate-configuration>       
   <session-factory>
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="show_sql">true</property> 
+    <property name="show_sql">true</property>
+    <mapping resource="com/s3corp/web/model/Role.hbm.xml"/>
     <mapping resource="com/s3corp/web/model/User.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

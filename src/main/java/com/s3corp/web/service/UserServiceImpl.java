@@ -13,13 +13,11 @@ public class UserServiceImpl implements UserService{
 	private UserDao userDao;
 	
 	public User findById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.findUser(id);
 	}
 
 	public List<User> findByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.findUser(name);
 	}
 
 	public void saveUser(String name, int age, double salary) {

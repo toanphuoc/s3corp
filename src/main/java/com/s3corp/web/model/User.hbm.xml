@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.s3corp.web.model">
+    <class name="User" table="user">
+        <id name="id" column="user_id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="age" column="age" type="int"/>
+        <property name="salary" column="salary" type="double"/>
+        <property name="username" column="username" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <many-to-one name="role" class="Role">
+        	<column name="role_id" not-null="true"></column>
+        </many-to-one>
+    </class> 
+</hibernate-mapping>

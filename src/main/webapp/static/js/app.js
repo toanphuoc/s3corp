@@ -7,24 +7,24 @@ var app = angular.module('myApp', [
 
 app.config(['$routeProvider', function($routeProvider){
 	$routeProvider.
-	when('/items/home', {
+	when('/', {
 		templateUrl : 'items/home',
 		controller: 'HomeController'
 	}).
-	when('/items/about', {
+	when('/about', {
 		templateUrl : 'items/about',
 		controller: 'AboutController'
 	}).
-	when('/items/blog', {
+	when('/blog', {
 		templateUrl : 'items/blog',
 		controller: 'BlogController'
 	}).
-	when('/items/contact', {
+	when('/contact', {
 		templateUrl : 'items/contact',
 		controller: 'ContactController'
 	}).
 	otherwise({
-	    redirectTo: '/items/home'
+	    redirectTo: '/'
 	});
 }]);
 
